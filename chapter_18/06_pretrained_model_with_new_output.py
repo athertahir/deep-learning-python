@@ -3,6 +3,8 @@ from keras.applications.vgg16 import VGG16
 from keras.models import Model
 from keras.layers import Dense
 from keras.layers import Flatten
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # load model without classifier layers
 model = VGG16(include_top=False, input_shape=(300, 300, 3))
 # add new classifier layers

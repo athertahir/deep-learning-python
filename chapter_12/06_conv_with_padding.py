@@ -33,6 +33,8 @@ the convolutional layer in our worked example.
 # example a convolutional layer with padding
 from keras.models import Sequential
 from keras.layers import Conv2D
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # create model
 model = Sequential()
 model.add(Conv2D(1, (3,3), padding='same', input_shape=(8, 8, 1)))

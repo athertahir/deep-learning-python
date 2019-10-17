@@ -4,6 +4,8 @@ from keras.preprocessing.image import img_to_array
 from keras.applications.vgg16 import preprocess_input
 from keras.applications.vgg16 import decode_predictions
 from keras.applications.vgg16 import VGG16
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # load an image from file
 image = load_img('dog.jpg', target_size=(224, 224))
 # convert the image pixels to a numpy array

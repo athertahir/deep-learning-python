@@ -20,6 +20,8 @@ from numpy import asarray
 from keras.models import Sequential
 from keras.layers import Conv2D
 from keras.layers import AveragePooling2D
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # define input data
 data = [[0, 0, 0, 1, 1, 0, 0, 0],
 		[0, 0, 0, 1, 1, 0, 0, 0],

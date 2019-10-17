@@ -66,7 +66,6 @@ print('Min: %.3f, Max: %.3f' % (pixels.min(), pixels.max()))
 
 # %%
 '''
-## Global Centering
 Running the example, we can see that the mean pixel value is about 152. Once centered,
 we can confirm that the new mean for the pixel values is 0.0 and that the new data range is
 negative and positive around this mean.

@@ -1,7 +1,6 @@
 # Example of face detection with a vggface2 model (Sharon Stone)
 from numpy import expand_dims
 
-%matplotlib notebook
 from matplotlib import pyplot
 from PIL import Image
 from numpy import asarray
@@ -9,6 +8,10 @@ from mtcnn.mtcnn import MTCNN
 from keras_vggface.vggface import VGGFace
 from keras_vggface.utils import preprocess_input
 from keras_vggface.utils import decode_predictions
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 
 # extract a single face from a given photograph
 def extract_face(filename, required_size=(224, 224)):

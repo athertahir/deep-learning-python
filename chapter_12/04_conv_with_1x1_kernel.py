@@ -11,6 +11,8 @@ the model with a single filter updated to use a filter size of 1 X 1 pixels.
 # example of a convolutional layer
 from keras.models import Sequential
 from keras.layers import Conv2D
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # create model
 model = Sequential()
 model.add(Conv2D(1, (1,1), input_shape=(8, 8, 1)))

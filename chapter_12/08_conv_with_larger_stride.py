@@ -45,6 +45,8 @@ data = [[0, 0, 0, 1, 1, 0, 0, 0],
 		[0, 0, 0, 1, 1, 0, 0, 0]]
 data = asarray(data)
 data = data.reshape(1, 8, 8, 1)
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # create model
 model = Sequential()
 model.add(Conv2D(1, (3,3), strides=(2, 2), input_shape=(8, 8, 1)))

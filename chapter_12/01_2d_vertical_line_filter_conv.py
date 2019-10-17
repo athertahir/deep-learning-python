@@ -56,6 +56,8 @@ three pixels.
 '''
 
 # %%
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # create model
 model = Sequential()
 model.add(Conv2D(1, (3,3), input_shape=(8, 8, 1)))

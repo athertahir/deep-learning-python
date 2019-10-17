@@ -5,6 +5,8 @@ from keras.applications.vgg16 import preprocess_input
 from keras.applications.vgg16 import VGG16
 from keras.models import Model
 from pickle import dump
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # load an image from file
 image = load_img('dog.jpg', target_size=(224, 224))
 # convert the image pixels to a numpy array

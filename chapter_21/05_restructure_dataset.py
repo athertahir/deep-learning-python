@@ -30,3 +30,4 @@ for file in listdir(src_directory):
 	elif file.startswith('dog'):
 		dst = dataset_home + dst_dir + 'dogs/'  + file
 		copyfile(src, dst)
+print('Done')

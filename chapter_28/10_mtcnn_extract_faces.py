@@ -29,7 +29,8 @@ of the swim team.
 %matplotlib notebook
 from matplotlib import pyplot
 from mtcnn.mtcnn import MTCNN
-
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # draw each face separately
 def draw_faces(filename, result_list):
 	# load the image

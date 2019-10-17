@@ -1,7 +1,7 @@
 # example of loading the fashion mnist dataset
 
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 from matplotlib import pyplot
 from keras.datasets import fashion_mnist
 # load dataset

@@ -29,7 +29,8 @@ detected faces. We can see that both faces were detected correctly
 from matplotlib import pyplot
 from matplotlib.patches import Rectangle
 from mtcnn.mtcnn import MTCNN
-
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # draw an image with detected objects
 def draw_image_with_boxes(filename, result_list):
 	# load the image

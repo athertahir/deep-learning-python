@@ -28,6 +28,8 @@ applied to the 8 X 8 input image to result in a 6 X 6 feature map as in the prev
 # example of stacked convolutional layers
 from keras.models import Sequential
 from keras.layers import Conv2D
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # create model
 model = Sequential()
 model.add(Conv2D(1, (3,3), input_shape=(8, 8, 1)))
