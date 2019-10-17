@@ -3,7 +3,11 @@ from os import listdir
 from PIL import Image
 from numpy import asarray
 
-%matplotlib notebook
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
+
 from matplotlib import pyplot
 from mtcnn.mtcnn import MTCNN
 
